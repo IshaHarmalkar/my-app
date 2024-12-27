@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Wetaher App</h1>
-        <Weather />
+        <Weather defaultCity="Goa" />
         <footer>
           This project was coded by Isha and is
           <a
