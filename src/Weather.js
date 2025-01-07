@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
-  const [city, setCity] = useState(props.defaultCity)
+  const [city, setCity] = useState(props.defaultCity);
 
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
@@ -18,30 +18,27 @@ export default function Weather(props) {
       wind: response.data.wind.deg,
       city: response.data.name,
       description: response.data.condition.description,
+      iconUrl: response.data.condition.icon_url,
     });
     setReady(true);
   }
 
-  function handleSubmit(event){
+  function handleSubmit(event) {
     event.preventDefault();
     //search for a city
     search(city);
-
   }
 
-  function search(){
-const apiKey = "f3t8e4a1a6ba9e7f04b3064e10efo014";
+  function search() {
+    const apiKey = "f3t8e4a1a6ba9e7f04b3064e10efo014";
 
-const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-axios.get(apiUrl).then(handleResponse);
-
+    axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleCityChange(event){
+  function handleCityChange(event) {
     setCity(event.target.value);
-
-
   }
 
   if (ready) {
