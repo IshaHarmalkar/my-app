@@ -19,6 +19,7 @@ export default function Weather(props) {
       city: response.data.name,
       description: response.data.condition.description,
       iconUrl: response.data.condition.icon_url,
+      icon: response.data.condition.icon
     });
     setReady(true);
   }
