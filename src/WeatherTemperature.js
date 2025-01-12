@@ -1,4 +1,3 @@
-import { validateFunctionCode } from "ajv/dist/compile/validate";
 import React, { useState } from "react";
 
 export default function WeatherTemperature(props) {
@@ -6,7 +5,6 @@ export default function WeatherTemperature(props) {
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
-
   }
 
   function showCelsius(event) {
@@ -14,11 +12,8 @@ export default function WeatherTemperature(props) {
     setUnit("celsius");
   }
 
-
-  function fahrenheit(){
-    
+  function fahrenheit() {
     return (props.celsius * 9) / 5 + 32;
-
   }
   if (unit === "celsius") {
     return (
