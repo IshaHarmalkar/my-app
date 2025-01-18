@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+const apiKey = "f3t8e4a1a6ba9e7f04b3064e10efo014";
+
+
+
+https://api.shecodes.io/weather/v1/forecast?lat=38.71667&lon=-9.13333&key=f3t8e4a1a6ba9e7f04b3064e10efo014&units=metric
