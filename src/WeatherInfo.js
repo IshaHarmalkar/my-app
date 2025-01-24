@@ -40,7 +40,7 @@ export default function WeatherInfo(props) {
           <ul>
             <li>Percipitation : 55%</li>
             <li>Humidity : {props.data.humidity}%</li>
-            <li>Wind : {props.data.wind.speed}</li>
+            <li>Wind : {props.data.wind}</li>
           </ul>
         </div>
       </div>
